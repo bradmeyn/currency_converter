@@ -1,0 +1,89 @@
+
+:root {
+    --font-main: 'Quicksand', sans-serif;
+    --default-radius: 10px;
+        
+    
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--font-main);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    
+}
+
+body {
+    height: 100vh;
+    
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 10rem
+}
+
+h1 {
+font-size: 3rem;
+
+}
+
+.container {
+ border: solid 1px blue;
+ display: flex;
+ padding: 1rem;
+ align-items: center;
+ justify-content: center;
+ height: 30rem;
+ margin: 0 auto;
+ 
+ 
+}
+
+.outcome{
+    font-size: 3rem;
+    
+}
+
+.component-container{
+    border: 1px solid grey;
+    border-radius: var(--default-radius);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    padding: 3rem;
+    height: 20rem;
+}
+
+.amount-label{
+    display: block;
+    font-size: 1.5rem;
+}
+
+
+.currency-container{
+
+}
+
+.currency, .amount-input{
+    font-size: 2rem;
+    height: 4rem;
+    margin: 0;
+
+}
+
+

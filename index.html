@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header><h1>Currency Converter</h1></header>
+
+    <main>
+        
+
+<span class="outcome">1 <span>USD</span> = <span>0.76</span> <span>AUD</span></span>
+        <div class="container">
+
+            <div class="component-container">
+                <div class="currency-container"> 
+                    <label class="amount-label" for="amount">Amount</label> 
+                    <input type="number" class="amount-input" id="amount-two" value="1">
+                    <select  class="currency" id="currency-one">
+                        <option value="AUD">AUD</option>
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+
+        
+            </div>
+
+    
+            <div class="swap-container">
+                <button>Swap</button>
+            </div>
+
+            <div class="component-container">
+
+                <div class="currency-container">
+                    <label class="amount-label" for="amount">Amount</label> 
+                    <input type="number" class="amount-input" id="amount-two" value="0">
+                    <select class="currency" id="currency-two">
+                        <option value="AUD">AUD</option>
+                        <option value="USD" >USD</option>
+                        <option value="EUR" selected>EUR</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+    
+
+    <script src="index.js"></script>
+</body>
+
+</html>
