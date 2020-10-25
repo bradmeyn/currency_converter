@@ -8,8 +8,9 @@
     --primary-very-light: #EAF2F8;
     --primary-light: #A9CCE3;
     --primary: #2471A3;
+    --primary-hover: #1c5880;
     --primary-dark:#154360;
-
+    --grey-very-light: #f8f9f9;
     --grey-light: #F4F6F6;
     --grey: #566573;
     --grey-dark: #212F3C;
@@ -41,7 +42,7 @@ box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
 }
 
 header i {
-font-size: 3rem;
+font-size: 4rem;
 margin-right: 2rem;
 }
 
@@ -129,6 +130,10 @@ font-size: 3rem;
     width: 20rem;
 }
 
+.amount-input:focus {
+    outline: none;
+}
+
 
 .currency-container{
 display: flex;
@@ -139,6 +144,7 @@ display: flex;
     border-bottom-right-radius: var(--default-radius);
     background-color: var(--primary-dark);
     color: #ffffff;
+    cursor: pointer;
     border: 1px solid var(--primary);
     border-left: none;
     padding: 1rem;
@@ -166,7 +172,24 @@ display: flex;
     padding: 1.5rem 1rem;
 }
 
-.button i {
-    padding-left: 1rem;
+.button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(3px);
+    transition: all ease .2s;
+}
 
+
+.button:focus {
+outline: none;
+}
+
+
+.button:active {
+    outline: none;
+    transform: translateY(6px);
+    transition: all ease .1s;
+}
+
+.button i {
+    padding-left: 2rem;
 }

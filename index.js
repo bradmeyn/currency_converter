@@ -33,10 +33,27 @@ fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
 
 };
 
+function swapCurrency () {
+    let temp;
+    // temp = inputTwo.value;
+    // console.log(temp);
+    // inputTwo.value = inputOne.value;
+    // console.log(temp);
+    // inputOne.value = temp;
+
+    temp = currencyTwo.value;
+    currencyTwo.value = currencyOne.value;
+    currencyOne.value = temp;
+    
+
+    fetchCurrency();
+}
+
 //event listeners for inputs/selectors
     inputOne.addEventListener("change", fetchCurrency);
     inputTwo.addEventListener("change", fetchCurrency);
     currencyOne.addEventListener("change", fetchCurrency);
     currencyTwo.addEventListener("change", fetchCurrency);
+    swapButton.addEventListener("click", swapCurrency);
 
 fetchCurrency();
