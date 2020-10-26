@@ -10,6 +10,32 @@ const currencyTwo = document.getElementById("currency-two");
 
 const swapButton = document.getElementById("swap-button");
 
+const componentOne = document.querySelector(".component-one");
+const componentTwo = document.querySelector(".component-two");
+
+let currencies = [
+    {
+        code: "USD",
+        name: "US Dollar",
+        flag: ""
+    },
+    {
+        code: "AUD",
+        name: "Australian Dollar",
+        flag: ""
+    },
+    {
+        code: "EUR",
+        name: "Euro",
+        flag: ""
+    }, 
+    {
+        code: "GBP",
+        name: "Pound Sterling",
+        flag: ""
+    }
+]
+
 //main function
 function fetchCurrency(){
 
@@ -22,6 +48,7 @@ function fetchCurrency(){
 fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
     .then((response) => response.json())
     .then((data) => {
+        console.log(data);
         let exchangeRate = data.rates[cTwo];
       console.log(`1 ${cOne} = ${data.rates[cTwo]} ${cTwo}`);
       rate.innerText = `1 ${cOne} = ${exchangeRate.toFixed(4)} ${cTwo}`;
@@ -34,6 +61,17 @@ fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
 };
 
 function swapCurrency () {
+
+    componentOne.classList.add("move-left");
+    componentTwo.classList.add("move-right");
+
+    setTimeout(() => {
+    componentOne.classList.remove("move-left");
+    componentTwo.classList.remove("move-right");
+    }, 500);
+    
+
+
     let temp;
     // temp = inputTwo.value;
     // console.log(temp);
