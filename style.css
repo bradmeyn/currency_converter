@@ -88,8 +88,6 @@ main {
     font-weight: 700;
     font-size: 4rem;
     margin: 3rem auto;
-    
-    
 }
 
 .component-container{
@@ -98,21 +96,35 @@ main {
     box-shadow: var(--default-shadow);
     display: flex;
     flex-direction: column;
-    height: 25rem;
+   
     width: 100%;
     max-width: 50rem;
+    
     align-items: center;
     margin: 3rem;
     padding: 5rem 3rem;
 }
 
+.heading-container {
+    display: flex;
+    
+    align-items: center;
+    margin-bottom: 1.5rem;
+   
+}
+
 .currency-name{
     color: var(--grey-dark);
+    display: inline;
     font-size: 2.5rem;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 1.5rem;
     width: 100%;
+}
+
+.currency-flag {
+    margin-left: 2rem;
+    height: 4rem;
+    border-radius: var(--default-radius);
 }
 
 .amount-label{
@@ -204,7 +216,8 @@ outline: none;
 }
 
 .button i {
-    padding-left: 2rem;
+    font-size: 1.75rem;
+    padding-left: 1rem;
 }
 
 @keyframes left {
@@ -236,12 +249,12 @@ outline: none;
 }
 
 .move-left {
-animation: left .3s ease-in;
+animation: left .2s ease-in;
 transition: all ease .1s;
 }
 
 .move-right {
-animation: right .3s ease-in;
+animation: right .2s ease-in;
 transition: all ease .1s;
 
 }

@@ -10,34 +10,75 @@ const currencyTwo = document.getElementById("currency-two");
 
 const swapButton = document.getElementById("swap-button");
 
-const componentOne = document.querySelector(".component-one");
-const componentTwo = document.querySelector(".component-two");
+const componentOne = document.getElementById("component-one");
+const componentTwo = document.getElementById("component-two");
+
+const headingOne = document.getElementById("currency-heading-one");
+const headingTwo = document.getElementById("currency-heading-two");
+
+const flagOne = document.getElementById("currency-flag-one");
+const flagTwo = document.getElementById("currency-flag-two");
 
 let currencies = [
     {
         code: "USD",
         name: "US Dollar",
-        flag: ""
+        flag: "/flags/USA.png"
     },
     {
         code: "AUD",
         name: "Australian Dollar",
-        flag: ""
+        flag: "/flags/Australia.png"
     },
     {
         code: "EUR",
         name: "Euro",
-        flag: ""
+        flag: "/flags/European Union.png"
     }, 
     {
         code: "GBP",
         name: "Pound Sterling",
-        flag: ""
+        flag: "/flags/United Kingdom.png"
     }
-]
+];
+
+for (const currency of currencies) {
+
+    if(currency.code == currencyOne.value){
+        console.log(currency.code);
+        headingOne.innerHTML = currency.name;
+        flagOne.src = currency.flag;
+    }
+
+    if(currency.code == currencyTwo.value){
+        console.log(currency.code);
+        headingTwo.innerHTML = currency.name;
+        flagTwo.src = currency.flag;
+    }
+    
+}
+
+
 
 //main function
 function fetchCurrency(){
+
+
+setTimeout(() => {
+    for (const currency of currencies) {
+    if(currency.code == currencyOne.value){
+        console.log(currency.code);
+        headingOne.innerHTML = currency.name;
+        flagOne.src = currency.flag;
+    }
+
+    if(currency.code == currencyTwo.value){
+        console.log(currency.code);
+        headingTwo.innerHTML = currency.name;
+        flagTwo.src = currency.flag;
+    }
+}
+    }, 100);
 
     let cOne = currencyOne.value;
     let cTwo = currencyTwo.value;
@@ -83,7 +124,6 @@ function swapCurrency () {
     currencyTwo.value = currencyOne.value;
     currencyOne.value = temp;
     
-
     fetchCurrency();
 }
 
