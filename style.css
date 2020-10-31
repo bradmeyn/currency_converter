@@ -21,6 +21,13 @@
 }
 
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
 html {
     box-sizing: border-box;
     font-size: 70%;
