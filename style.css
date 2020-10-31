@@ -73,10 +73,11 @@ main {
     background: var(--primary-very-light);
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
      padding: 3rem 2rem;
     flex-wrap: nowrap;
+    width: 100%;
 }
 
 .container {
@@ -171,7 +172,7 @@ width: 100%;
     border: 1px solid var(--primary);
     border-left: none;
     padding: 1rem;
-    --webkit-appearance-border-top-left-radius: 0;
+    -webkit-appearance: none
     
 }
 
@@ -194,7 +195,7 @@ background-color: var(--primary-hover);
     font-size: 2rem;
     font-weight: 700;
     /* -webkit-appearance: none; */
-    
+    -webkit-border-radius: 0;
 }
 
 
