@@ -164,6 +164,7 @@ width: 100%;
     border: 1px solid var(--primary);
     border-left: none;
     padding: 1rem;
+    --webkit-appearance-border-top-left-radius: 0;
     
 }
 
