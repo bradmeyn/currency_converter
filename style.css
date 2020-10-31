@@ -147,8 +147,8 @@ main {
     border-bottom-left-radius: var(--default-radius);
     padding-left: 2rem;
     width: 100%;
-    -webkit-top-left-border-radius: var(--default-radius);
-    -webkit-bottom-left-border-radius: var(--default-radius);
+    -webkit-top-right-border-radius: 0;
+    -webkit-bottom-right-border-radius: 0;
 }
 
 .amount-input:focus, .amount-input:hover {
@@ -174,8 +174,8 @@ width: 100%;
     border-left: none;
     padding: 1rem;
     -webkit-appearance: none;
-    -webkit-top-right-border-radius: var(--default-radius);
-    -webkit-bottom-right-border-radius: var(--default-radius);
+    -webkit-top-left-border-radius: 0;
+    -webkit-bottom-left-border-radius: 0;
 }
 
 /* .la-angle-down {
