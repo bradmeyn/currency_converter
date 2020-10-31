@@ -32,6 +32,7 @@ html {
 *:after {
     box-sizing: inherit;
     margin: 0;
+    padding: none;
 }
 
 body {
@@ -76,7 +77,6 @@ main {
  align-items: center;
  justify-content: center;
  width: 100%;
- border: solid 1px blue;
 }
 
 .rate{
@@ -93,7 +93,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 25rem;
+    min-height: 25rem;
     min-width: 20rem;
     max-width: 50rem;
     width: 100%;
@@ -167,6 +167,14 @@ width: 100%;
     
 }
 
+/* .la-angle-down {
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: relative;
+    top: 43px;
+    right: 38px;
+} */
+
 .currency-select:hover {
 background-color: var(--primary-hover);
 }
@@ -177,7 +185,8 @@ background-color: var(--primary-hover);
     font-family: var(--font-main);
     font-size: 2rem;
     font-weight: 700;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
+    
 }
 
 
@@ -293,7 +302,7 @@ transition: all ease .1s;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: solid 1px red;
+      
     }
 
     
