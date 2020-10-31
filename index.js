@@ -23,22 +23,22 @@ let currencies = [
     {
         code: "USD",
         name: "US Dollar",
-        flag: "/flags/USA.png"
+        flag: "/images/USA.png"
     },
     {
         code: "AUD",
         name: "Australian Dollar",
-        flag: "/flags/Australia.png"
+        flag: "/images/Australia.png"
     },
     {
         code: "EUR",
         name: "Euro",
-        flag: "/flags/European Union.png"
+        flag: "/images/European Union.png"
     }, 
     {
         code: "GBP",
         name: "Pound Sterling",
-        flag: "/flags/United Kingdom.png"
+        flag: "/images/United Kingdom.png"
     }
 ];
 
