@@ -150,11 +150,10 @@ main {
 }
 
 .amount-input {
-   
     height: 100%;
     color: var(--grey);
     background-color: transparent;
-
+    outline: none;
     padding: 1.5rem 2rem;
     border: none;
     border-top-left-radius: var(--default-radius);
@@ -163,6 +162,10 @@ main {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     
+}
+
+.amount-input:hover, .amount-input:focus {
+background-color: var(--grey-light);
 }
 
 
@@ -189,7 +192,7 @@ main {
     
     font-size: 1.6rem;
     position: absolute;
-    left: 59px;
+    left: 58px;
 }
 
 .currency-select {
@@ -201,13 +204,14 @@ main {
     border-left: none;
     border-radius: none;
     padding: 1rem 3rem 1rem 1rem;
+    outline: none;
     height: 100%;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
 
-.currency-select:hover, 
-.currency-select-container:hover {
+.currency-select:hover, .currency-select:focus,
+.currency-select-container:hover, .currency-select-container:focus {
     background-color: var(--primary-hover);
      border-top-right-radius: var(--default-radius);
      border-bottom-right-radius: var(--default-radius);
@@ -216,7 +220,7 @@ main {
 .currency-select, .amount-input{
    
     font-family: var(--font-main);
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
@@ -231,7 +235,7 @@ main {
     cursor: pointer;
     width: 13rem;
     box-shadow: var(--default-shadow);
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     margin: 3rem;
 }
 
@@ -293,9 +297,8 @@ transition: all ease .1s;
 }
 
 .move-right {
-animation: right .2s ease-in;
-transition: all ease .1s;
-
+    animation: right .2s ease-in;
+    transition: all ease .1s;
 }
 
 
@@ -316,10 +319,7 @@ transition: all ease .1s;
         justify-content: center;
     }
 
-    .component-container {
-        height: 22rem;
-        
-    }
+   
 }
 
 
@@ -338,5 +338,14 @@ transition: all ease .1s;
       
     }
 
+    .currency-container {
+        width: 100%;
+    }
+
+    .currency-select-container i {
+        font-size: 1.6rem;
+        position: absolute;
+        left: 53px;
+    }
     
 }
