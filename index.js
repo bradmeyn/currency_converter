@@ -61,7 +61,7 @@ for (const currency of currencies) {
 
 
 //main function
-function fetchCurrency(){
+async function fetchCurrency(){
 
 
 setTimeout(() => {
@@ -83,10 +83,7 @@ setTimeout(() => {
     let cOne = currencyOne.value;
     let cTwo = currencyTwo.value;
     
-    
-   
-
-fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
+    await fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
@@ -96,9 +93,6 @@ fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
       inputTwo.value = (inputOne.value * parseFloat(exchangeRate).toFixed(4));
       
     });
-
-    
-
 };
 
 function swapCurrency () {

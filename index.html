@@ -12,21 +12,26 @@
 
 <body>
 
-    <header><i class="las la-coins"></i><h1>Currency Converter</h1></header>
+    <header>
+        <i class="las la-coins"></i>
+        <h1>Currency Converter</h1>
+    </header>
 
-    <main >
-        <div class="rate" id="rate">1 USD = 0.70 AUD
+    <main>
 
+        <div class="img-container">
+            <img src="/images/currency.svg" alt="">
         </div>
-
+        
+        <div class="rate" id="rate">1 USD = 0.70 AUD
+        </div>
         <div class="container">
-
+            
             <div class="component-container" id="component-one">
-                <div class="heading-container">
-<h2 class="currency-name" id="currency-heading-one">Currency 1</h2>
-                <img src="/images/246-india.png" alt="" class="currency-flag" id="currency-flag-one">
+                <div class="currency-name-container">
+                    <h2 class="currency-name" id="currency-heading-one">Currency 1</h2>
+                    <img src="/images/246-india.png" alt="" class="currency-flag" id="currency-flag-one">
                 </div>
-                
                 <label class="amount-label" for="amount">Amount</label> 
                 <div class="currency-container"> 
                      
@@ -41,20 +46,14 @@
                         </select>
                         <i class="las la-angle-down"></i>
                     </span>
-                    
-                    <!-- <i class="las la-angle-down"></i> -->
                 </div>
-
-        
             </div>
-
-    
             <div class="swap-container">
                 <button class="swap-button" id="swap-button" role="button">Swap<i class="las la-exchange-alt"></i></button>
             </div>
 
             <div class="component-container" id="component-two">
-                <div class="heading-container">
+                <div class="currency-name-container">
                     <h2 class="currency-name" id="currency-heading-two">Currency 2</h2>
                     <img src="/images/246-india.png" alt="" class="currency-flag" id="currency-flag-two">
                 </div>
@@ -70,17 +69,18 @@
                         </select>
                         <i class="las la-angle-down"></i>
                 </span>
-                    
-                    <!-- <i class="las la-angle-down"></i> -->
+                 
                 </div>
             </div>
 
         </div>
-
+        <div class="img-container-two">
+            <img src="/images/transferwise.svg" alt="">
+        </div>
     </main>
-    
-
+    <footer>
+        Footer
+    </footer>
     <script src="index.js"></script>
 </body>
-
 </html>
