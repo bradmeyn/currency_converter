@@ -73,49 +73,48 @@ header h1 {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* padding-top: 7rem; */
     align-items: center;
     background: #ffffff;
     width: 100%;
     flex: 1;
-    
+   
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
 }
 
 .img-container {
     position: absolute;
-    left: -4rem;
-    top: 3rem;
+    margin: 0 auto;
+    top: 60%;
     overflow: hidden;
     width: 40rem;
+    
 }
 
-.img-container-two {
-    position: absolute;
-    top: 50rem;
-    right: 2rem;
-    overflow: hidden;
-    width: 30rem;
-}
+
 
 .container {
  display: flex;
  align-items: center;
  justify-content: center;
  
+ 
 }
 
 .rate{
-    color: var(--grey-dark);
+    color: var(--primary-dark);
     font-weight: 700;
-    font-size: 2.75rem;
+    font-size: 5rem;
     margin: 0 auto;
-    padding: 2rem 0 3rem;
+    padding: 8rem 0 6rem;
     z-index: 2;
 }
 
 
 /* component */
-
 
 .component-container{
     background-color: #ffffff;
@@ -124,13 +123,10 @@ main {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-   
-    
+    height: 30rem;
     min-width: 15rem;
-    max-width: 30rem;
     align-items: center;
-    padding: 2rem;
+    padding: 6rem 4rem;
 }
 
 .currency-name-container {
@@ -150,14 +146,15 @@ main {
 }
 
 .currency-flag {
+    
     margin-left: 2rem;
-    height: 4rem;
+    height: 6rem;
     border-radius: var(--default-radius);
 }
 
 .amount-label{
     color: var(--grey);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     padding: .5rem 2rem;
     text-align: left;
@@ -218,7 +215,7 @@ background-color: var(--grey-light);
 
 .currency-select-container i {
     
-    font-size: 1.6rem;
+    font-size: .1rem;
     position: absolute;
     left: 58px;
 }
@@ -233,8 +230,22 @@ background-color: var(--grey-light);
     border-radius: none;
     padding: 1rem 3rem 1rem 1rem;
     height: 100%;
+   position: relative;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
+
+    background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - .5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
 }
 
 .currency-select:hover, .currency-select:focus,
@@ -288,10 +299,22 @@ background-color: var(--grey-light);
 }
 
 
-footer {
-    background-color: slategray;
-    height: 10rem;
+.footer {
+    background-color: var(--primary-dark);
     z-index: 2;
+    font-family: var(--font-main);
+    color:var(--primary-light) ;
+    font-weight: 700;
+    padding: 3rem 6rem;
+    font-size: 1.4rem;
+    
+}
+
+
+.copyright {
+   
+  
+    text-align: center;
 }
 
 
@@ -335,7 +358,7 @@ transition: all ease .1s;
 }
 
 
-/* small screens under 768px   */
+/* small screens under 768px  
 @media only screen and (max-width: 768px){
     html {
         font-size: 40%;
@@ -347,11 +370,11 @@ transition: all ease .1s;
 
 
    
-}
+} */
 
 
 /* screens under 992px */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1070px) {
 
     html { 
         font-size: 62.5%;
@@ -361,12 +384,44 @@ transition: all ease .1s;
         justify-content: center;
     }
 
+
+
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
       
+    }
+
+    .main {
+        margin-top: 4rem;
+        
+    }
+
+    .rate{
+        color: var(--grey-dark);
+        font-weight: 700;
+        font-size: 3rem;
+        margin: 0 auto;
+        padding: 3rem;
+        z-index: 2;
+    }
+
+    .component-container{
+        padding: 2rem;
+        height: 22rem;
+        
+    }
+
+
+    .img-container {
+        position: absolute;
+        margin: 0 auto;
+        top: 65%;
+        overflow: hidden;
+        width: 30rem;
+  
     }
 
     .currency-select-container i {

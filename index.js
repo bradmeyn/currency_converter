@@ -19,6 +19,8 @@ const headingTwo = document.getElementById("currency-heading-two");
 const flagOne = document.getElementById("currency-flag-one");
 const flagTwo = document.getElementById("currency-flag-two");
 
+let exchangeRate;
+
 let currencies = [
     {
         code: "USD",
@@ -39,6 +41,16 @@ let currencies = [
         code: "GBP",
         name: "Pound Sterling",
         flag: "/images/United Kingdom.png"
+    },
+    {
+        code: "VND",
+        name: "Vietnamese Dong",
+        flag: "/images/Vietnam.png"
+    },
+    {
+        code: "BTC",
+        name: "Bitcoin",
+        flag: "/images/bitcoin.png"
     }
 ];
 
@@ -82,15 +94,17 @@ setTimeout(() => {
 
     let cOne = currencyOne.value;
     let cTwo = currencyTwo.value;
+    let key = "9a5cbe380fe7f4417cdc";
     
-    await fetch(`https://api.exchangeratesapi.io/latest?base=${cOne}`)
+    await fetch(`https://free.currconv.com/api/v7/convert?q=${cOne}_${cTwo}&compact=ultra&apiKey=${key}`)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
-        let exchangeRate = data.rates[cTwo];
-      console.log(`1 ${cOne} = ${data.rates[cTwo]} ${cTwo}`);
+        
+         exchangeRate = data[`${cOne}_${cTwo}`];
+        console.log(exchangeRate);
+      console.log(`1 ${cOne} = ${exchangeRate} ${cTwo}`);
       rate.innerText = `1 ${cOne} = ${exchangeRate.toFixed(4)} ${cTwo}`;
-      inputTwo.value = (inputOne.value * parseFloat(exchangeRate).toFixed(4));
+      inputTwo.value = (inputOne.value * parseFloat(exchangeRate)).toFixed(4);
       
     });
 };
@@ -117,13 +131,20 @@ function swapCurrency () {
     temp = currencyTwo.value;
     currencyTwo.value = currencyOne.value;
     currencyOne.value = temp;
+    inputOne.value = 1;
     
     fetchCurrency();
 }
 
+
+function updateValueOne() {
+
+    inputOne.value = (inputTwo.value * exchangeRate.toFixed(4));
+}
+
 //event listeners for inputs/selectors
     inputOne.addEventListener("change", fetchCurrency);
-    inputTwo.addEventListener("change", fetchCurrency);
+    inputTwo.addEventListener("change", updateValueOne);
     currencyOne.addEventListener("change", fetchCurrency);
     currencyTwo.addEventListener("change", fetchCurrency);
     swapButton.addEventListener("click", swapCurrency);
