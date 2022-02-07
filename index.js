@@ -25,32 +25,32 @@ let currencies = [
     {
         code: "USD",
         name: "US Dollar",
-        flag: "/images/USA.png"
+        flag: "./images/USA.png"
     },
     {
         code: "AUD",
         name: "Australian Dollar",
-        flag: "/images/Australia.png"
+        flag: "./images/Australia.png"
     },
     {
         code: "EUR",
         name: "Euro",
-        flag: "/images/European Union.png"
+        flag: "./images/European Union.png"
     }, 
     {
         code: "GBP",
         name: "Pound Sterling",
-        flag: "/images/United Kingdom.png"
+        flag: "./images/United Kingdom.png"
     },
     {
         code: "VND",
         name: "Vietnamese Dong",
-        flag: "/images/Vietnam.png"
+        flag: "./images/Vietnam.png"
     },
     {
         code: "BTC",
         name: "Bitcoin",
-        flag: "/images/bitcoin.png"
+        flag: "./images/bitcoin.png"
     }
 ];
 
